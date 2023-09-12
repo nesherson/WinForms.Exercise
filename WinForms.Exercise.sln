@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms.Exercise", "WinForms.Exercise\WinForms.Exercise.csproj", "{15DDA9F1-E266-436F-967B-F56F14E3061E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinForms.Data", "WinForms.Data\WinForms.Data.csproj", "{8F6FB0C0-3BD4-4C1C-A950-3F4C75DF3021}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{15DDA9F1-E266-436F-967B-F56F14E3061E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15DDA9F1-E266-436F-967B-F56F14E3061E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15DDA9F1-E266-436F-967B-F56F14E3061E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F6FB0C0-3BD4-4C1C-A950-3F4C75DF3021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F6FB0C0-3BD4-4C1C-A950-3F4C75DF3021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F6FB0C0-3BD4-4C1C-A950-3F4C75DF3021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F6FB0C0-3BD4-4C1C-A950-3F4C75DF3021}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
