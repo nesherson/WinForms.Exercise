@@ -144,6 +144,7 @@
             Controls.Add(label1);
             Name = "frmRegistration";
             Text = "Registration";
+            Load += frmRegistration_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);
