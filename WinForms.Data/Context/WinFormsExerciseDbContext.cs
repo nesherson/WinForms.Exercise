@@ -18,6 +18,20 @@ namespace WinForms.Data.Context
             optionsBuilder.UseSqlite(putanja);
         }
 
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Student>()
+                .HasMany(s => s.Role)
+                .WithMany(r => r.Student)
+                .UsingEntity(e => e.ToTable("StudentsRoles"));
+        }
+
         public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
+        public DbSet<Student> Students { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<Subject> Subjects { get; set; }
+        public DbSet<StudentSubject> StudentsSubjects { get; set; }
+
     }
 }

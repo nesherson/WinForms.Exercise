@@ -126,6 +126,12 @@
   <data name="MandatoryValue" xml:space="preserve">
     <value>This is a mandatory value</value>
   </data>
+  <data name="StudentAddSuccess" xml:space="preserve">
+    <value>Student {0} ({1}) was successfully created</value>
+  </data>
+  <data name="StudentUpdateSuccess" xml:space="preserve">
+    <value>Student {0} ({1}) was successfully updated</value>
+  </data>
   <data name="UserAddSuccess" xml:space="preserve">
     <value>User {0} successfully added</value>
   </data>

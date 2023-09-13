@@ -7,6 +7,8 @@
         public const string Information = "Information";
         public const string IncorrectCredentials = "IncorrectCredentials";
         public const string Warning = "Warning";
+        public const string StudentAddSuccess = "StudentAddSuccess";
+        public const string StudentUpdateSuccess = "StudentUpdateSuccess";
 
     }
 }

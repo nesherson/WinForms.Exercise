@@ -11,6 +11,13 @@
                 errorProvider.SetError(tb, ResourceGetter.Get(key));
                 return valid;
             }
+            else if (control is ComboBox cb && cb.SelectedItem == null)
+            {
+                valid = false;
+                errorProvider.SetError(cb, ResourceGetter.Get(key));
+                return valid;
+            }
+
 
             errorProvider.Clear();
 

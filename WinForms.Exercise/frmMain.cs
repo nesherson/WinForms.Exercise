@@ -27,5 +27,31 @@ namespace WinForms.Exercise
         {
             Close();
         }
+
+        private void newToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmStudentEdit());
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmStudentSearch());
+        }
+
+        private void searchExam120923ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmStudentSearchExam120923());
+        }
+
+        private void ShowForm(Form form)
+        {
+            form.MdiParent = this;
+            form.Show();
+        }
+
+        private void newToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ShowForm(new frmSubjectEdit());
+        }
     }
 }

@@ -88,6 +88,24 @@ namespace WinForms.Exercise.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Student {0} ({1}) was successfully created.
+        /// </summary>
+        internal static string StudentAddSuccess {
+            get {
+                return ResourceManager.GetString("StudentAddSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Student {0} ({1}) was successfully updated.
+        /// </summary>
+        internal static string StudentUpdateSuccess {
+            get {
+                return ResourceManager.GetString("StudentUpdateSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to User {0} successfully added.
         /// </summary>
         internal static string UserAddSuccess {

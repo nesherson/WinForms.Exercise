@@ -15,5 +15,10 @@ namespace WinForms.Exercise.Helpers
         {
             return string.Format(resourceManager.GetString(key), replacement1);
         }
+
+        public static string Get(string key, string replacement1, string replacement2)
+        {
+            return string.Format(resourceManager.GetString(key), replacement1, replacement2);
+        }
     }
 }
