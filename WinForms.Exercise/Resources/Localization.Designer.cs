@@ -61,11 +61,47 @@ namespace WinForms.Exercise.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Incorrect credentials.
+        /// </summary>
+        internal static string IncorrectCredentials {
+            get {
+                return ResourceManager.GetString("IncorrectCredentials", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Information.
+        /// </summary>
+        internal static string Information {
+            get {
+                return ResourceManager.GetString("Information", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This is a mandatory value.
         /// </summary>
         internal static string MandatoryValue {
             get {
                 return ResourceManager.GetString("MandatoryValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to User {0} successfully added.
+        /// </summary>
+        internal static string UserAddSuccess {
+            get {
+                return ResourceManager.GetString("UserAddSuccess", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        internal static string Warning {
+            get {
+                return ResourceManager.GetString("Warning", resourceCulture);
             }
         }
     }

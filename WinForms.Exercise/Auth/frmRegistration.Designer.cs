@@ -101,6 +101,7 @@
             // 
             txtPassword.Location = new Point(366, 165);
             txtPassword.Name = "txtPassword";
+            txtPassword.PasswordChar = '*';
             txtPassword.Size = new Size(214, 23);
             txtPassword.TabIndex = 5;
             // 
@@ -142,9 +143,9 @@
             Controls.Add(label2);
             Controls.Add(txtUsername);
             Controls.Add(label1);
+            MaximizeBox = false;
             Name = "frmRegistration";
             Text = "Registration";
-            Load += frmRegistration_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)errorProvider).EndInit();
             ResumeLayout(false);

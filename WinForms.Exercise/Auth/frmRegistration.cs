@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using WinForms.Data.Auth;
 using WinForms.Data.Context;
 using WinForms.Exercise.Helpers;
 
@@ -13,9 +14,23 @@ namespace WinForms.Exercise.Auth
             InitializeComponent();
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private async void btnRegister_Click(object sender, EventArgs e)
         {
             if (!ValidInput()) return;
+
+            var newUser = new User()
+            {
+                Email = txtEmail.Text,
+                Username = txtUsername.Text,
+                Password = txtPassword.Text
+            };
+
+            dbContext.Users.Add(newUser);
+            await dbContext.SaveChangesAsync();
+
+            MessageBox.Show(ResourceGetter.Get(ResourceKeys.UserAddSuccess, newUser.Username), ResourceKeys.Information, MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            Close();
         }
 
         private bool ValidInput()
@@ -25,9 +40,6 @@ namespace WinForms.Exercise.Auth
                 ControlValidator.Validate(txtPassword, errorProvider, ResourceKeys.MandatoryValue);
         }
 
-        private async void frmRegistration_Load(object sender, EventArgs e)
-        {
-            var test = await dbContext.Users.ToListAsync();
-        }
+
     }
 }

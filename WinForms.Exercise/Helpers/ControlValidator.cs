@@ -7,7 +7,9 @@
             var valid = true;
             if (control is TextBox tb && string.IsNullOrWhiteSpace(tb.Text))
             {
-                errorProvider.SetError(tb, Resources.Get(key));
+                valid = false;
+                errorProvider.SetError(tb, ResourceGetter.Get(key));
+                return valid;
             }
 
             errorProvider.Clear();
