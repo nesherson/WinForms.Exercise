@@ -117,8 +117,22 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="fit-znak-osnovni" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\fit-znak-osnovni.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Info" xml:space="preserve">
+    <value>Info</value>
+  </data>
+  <data name="KorisnikKreiranUspjeh" xml:space="preserve">
+    <value>Korisnik uspjesno kreiran</value>
+  </data>
+  <data name="NeispravniPodaci" xml:space="preserve">
+    <value>Uneseni podaci nisu ispravni</value>
+  </data>
+  <data name="ObaveznaVrijednost" xml:space="preserve">
+    <value>Unos je obavezan</value>
+  </data>
+  <data name="StudentKreiranUspjeh" xml:space="preserve">
+    <value>Student uspjesno kreiran</value>
+  </data>
+  <data name="Upozorenje" xml:space="preserve">
+    <value>Upozorenje</value>
   </data>
 </root>

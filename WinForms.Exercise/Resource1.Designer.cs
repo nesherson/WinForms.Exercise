@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WinForms.Exercise.Properties {
+namespace WinForms.Exercise {
     using System;
     
     
@@ -22,14 +22,14 @@ namespace WinForms.Exercise.Properties {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources {
+    internal class Resource1 {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
         private static global::System.Globalization.CultureInfo resourceCulture;
         
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources() {
+        internal Resource1() {
         }
         
         /// <summary>
@@ -39,7 +39,7 @@ namespace WinForms.Exercise.Properties {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WinForms.Exercise.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WinForms.Exercise.Resource1", typeof(Resource1).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -61,12 +61,56 @@ namespace WinForms.Exercise.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        ///   Looks up a localized string similar to Info.
         /// </summary>
-        internal static System.Drawing.Bitmap fit_znak_osnovni {
+        internal static string Info {
             get {
-                object obj = ResourceManager.GetObject("fit-znak-osnovni", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
+                return ResourceManager.GetString("Info", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Korisnik uspjesno kreiran.
+        /// </summary>
+        internal static string KorisnikKreiranUspjeh {
+            get {
+                return ResourceManager.GetString("KorisnikKreiranUspjeh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Uneseni podaci nisu ispravni.
+        /// </summary>
+        internal static string NeispravniPodaci {
+            get {
+                return ResourceManager.GetString("NeispravniPodaci", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unos je obavezan.
+        /// </summary>
+        internal static string ObaveznaVrijednost {
+            get {
+                return ResourceManager.GetString("ObaveznaVrijednost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Student uspjesno kreiran.
+        /// </summary>
+        internal static string StudentKreiranUspjeh {
+            get {
+                return ResourceManager.GetString("StudentKreiranUspjeh", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Upozorenje.
+        /// </summary>
+        internal static string Upozorenje {
+            get {
+                return ResourceManager.GetString("Upozorenje", resourceCulture);
             }
         }
     }
