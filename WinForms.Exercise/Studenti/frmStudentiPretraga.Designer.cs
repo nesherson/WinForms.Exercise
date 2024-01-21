@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             dgvStudentiPretraga = new DataGridView();
-            btnStudentNovi = new Button();
-            txtPretraga = new TextBox();
             Ime = new DataGridViewTextBoxColumn();
             Prezime = new DataGridViewTextBoxColumn();
             DatumRodjenja = new DataGridViewTextBoxColumn();
@@ -39,6 +37,8 @@
             Slika = new DataGridViewImageColumn();
             Aktivan = new DataGridViewCheckBoxColumn();
             Predmeti = new DataGridViewButtonColumn();
+            btnStudentNovi = new Button();
+            txtPretraga = new TextBox();
             ((System.ComponentModel.ISupportInitialize)dgvStudentiPretraga).BeginInit();
             SuspendLayout();
             // 
@@ -56,24 +56,6 @@
             dgvStudentiPretraga.Size = new Size(776, 339);
             dgvStudentiPretraga.TabIndex = 0;
             dgvStudentiPretraga.CellContentClick += dgvStudentiPretraga_CellContentClick;
-            // 
-            // btnStudentNovi
-            // 
-            btnStudentNovi.Location = new Point(692, 12);
-            btnStudentNovi.Name = "btnStudentNovi";
-            btnStudentNovi.Size = new Size(96, 23);
-            btnStudentNovi.TabIndex = 1;
-            btnStudentNovi.Text = "Novi student";
-            btnStudentNovi.UseVisualStyleBackColor = true;
-            btnStudentNovi.Click += btnStudentNovi_Click;
-            // 
-            // txtPretraga
-            // 
-            txtPretraga.Location = new Point(12, 13);
-            txtPretraga.Name = "txtPretraga";
-            txtPretraga.Size = new Size(503, 23);
-            txtPretraga.TabIndex = 2;
-            txtPretraga.TextChanged += txtPretraga_TextChanged;
             // 
             // Ime
             // 
@@ -135,6 +117,24 @@
             Predmeti.Text = "Predmeti";
             Predmeti.UseColumnTextForButtonValue = true;
             // 
+            // btnStudentNovi
+            // 
+            btnStudentNovi.Location = new Point(692, 12);
+            btnStudentNovi.Name = "btnStudentNovi";
+            btnStudentNovi.Size = new Size(96, 23);
+            btnStudentNovi.TabIndex = 1;
+            btnStudentNovi.Text = "Novi student";
+            btnStudentNovi.UseVisualStyleBackColor = true;
+            btnStudentNovi.Click += btnStudentNovi_Click;
+            // 
+            // txtPretraga
+            // 
+            txtPretraga.Location = new Point(12, 13);
+            txtPretraga.Name = "txtPretraga";
+            txtPretraga.Size = new Size(503, 23);
+            txtPretraga.TabIndex = 2;
+            txtPretraga.TextChanged += txtPretraga_TextChanged;
+            // 
             // frmStudentiPretraga
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -144,6 +144,7 @@
             Controls.Add(btnStudentNovi);
             Controls.Add(dgvStudentiPretraga);
             Name = "frmStudentiPretraga";
+            StartPosition = FormStartPosition.CenterParent;
             Text = "frmStudentiPretraga";
             Load += frmStudentiPretraga_Load;
             ((System.ComponentModel.ISupportInitialize)dgvStudentiPretraga).EndInit();

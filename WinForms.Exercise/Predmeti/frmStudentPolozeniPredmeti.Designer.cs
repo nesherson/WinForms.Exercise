@@ -41,6 +41,7 @@
             label3 = new Label();
             lblImePrezime = new Label();
             lblBrojIndeksa = new Label();
+            btnUvjerenje = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvPolozeniPredmeti).BeginInit();
             SuspendLayout();
             // 
@@ -163,11 +164,22 @@
             lblBrojIndeksa.TabIndex = 9;
             lblBrojIndeksa.Text = "BrojIndeksa";
             // 
+            // btnUvjerenje
+            // 
+            btnUvjerenje.Location = new Point(462, 12);
+            btnUvjerenje.Name = "btnUvjerenje";
+            btnUvjerenje.Size = new Size(75, 23);
+            btnUvjerenje.TabIndex = 10;
+            btnUvjerenje.Text = "Uvjerenje";
+            btnUvjerenje.UseVisualStyleBackColor = true;
+            btnUvjerenje.Click += btnUvjerenje_Click;
+            // 
             // frmStudentPolozeniPredmeti
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(543, 412);
+            Controls.Add(btnUvjerenje);
             Controls.Add(lblBrojIndeksa);
             Controls.Add(lblImePrezime);
             Controls.Add(label3);
@@ -201,5 +213,6 @@
         private Label label3;
         private Label lblImePrezime;
         private Label lblBrojIndeksa;
+        private Button btnUvjerenje;
     }
 }

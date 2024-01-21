@@ -1,0 +1,3 @@
+﻿namespace WinForms.Exercise.Izvjestaji
+{
+}

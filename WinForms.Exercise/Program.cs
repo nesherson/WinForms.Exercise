@@ -1,5 +1,4 @@
-using WinForms.Exercise.Auth;
-using WinForms.Exercise.Studenti;
+using WinForms.Exercise.Glavna;
 
 namespace WinForms.Exercise
 {
@@ -14,7 +13,7 @@ namespace WinForms.Exercise
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmStudentiPretraga());
+            Application.Run(new frmGlavna());
         }
     }
 }

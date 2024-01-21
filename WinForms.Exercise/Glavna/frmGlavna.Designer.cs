@@ -38,6 +38,7 @@
             studentiToolStripMenuItem = new ToolStripMenuItem();
             pretragaToolStripMenuItem = new ToolStripMenuItem();
             noviToolStripMenuItem = new ToolStripMenuItem();
+            pingToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,7 +85,7 @@
             // 
             // vjezbaToolStripMenuItem
             // 
-            vjezbaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { studentiToolStripMenuItem });
+            vjezbaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { studentiToolStripMenuItem, pingToolStripMenuItem });
             vjezbaToolStripMenuItem.Name = "vjezbaToolStripMenuItem";
             vjezbaToolStripMenuItem.Size = new Size(53, 20);
             vjezbaToolStripMenuItem.Text = "Vjezba";
@@ -99,15 +100,23 @@
             // pretragaToolStripMenuItem
             // 
             pretragaToolStripMenuItem.Name = "pretragaToolStripMenuItem";
-            pretragaToolStripMenuItem.Size = new Size(180, 22);
+            pretragaToolStripMenuItem.Size = new Size(142, 22);
             pretragaToolStripMenuItem.Text = "Pretraga";
             pretragaToolStripMenuItem.Click += pretragaToolStripMenuItem_Click;
             // 
             // noviToolStripMenuItem
             // 
             noviToolStripMenuItem.Name = "noviToolStripMenuItem";
-            noviToolStripMenuItem.Size = new Size(180, 22);
+            noviToolStripMenuItem.Size = new Size(142, 22);
             noviToolStripMenuItem.Text = "Novi student";
+            noviToolStripMenuItem.Click += noviToolStripMenuItem_Click;
+            // 
+            // pingToolStripMenuItem
+            // 
+            pingToolStripMenuItem.Name = "pingToolStripMenuItem";
+            pingToolStripMenuItem.Size = new Size(180, 22);
+            pingToolStripMenuItem.Text = "Ping";
+            pingToolStripMenuItem.Click += pingToolStripMenuItem_Click;
             // 
             // frmGlavna
             // 
@@ -140,5 +149,6 @@
         private ToolStripMenuItem studentiToolStripMenuItem;
         private ToolStripMenuItem pretragaToolStripMenuItem;
         private ToolStripMenuItem noviToolStripMenuItem;
+        private ToolStripMenuItem pingToolStripMenuItem;
     }
 }

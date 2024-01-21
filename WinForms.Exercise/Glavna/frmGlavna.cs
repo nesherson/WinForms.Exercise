@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using WinForms.Exercise.Asinhrono;
+using WinForms.Exercise.Studenti;
 
 namespace WinForms.Exercise.Glavna
 {
@@ -30,6 +23,23 @@ namespace WinForms.Exercise.Glavna
 
         private void pretragaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            PrikaziFormu(new frmStudentiPretraga());
+        }
+
+        private void PrikaziFormu(Form forma)
+        {
+            forma.MdiParent = this;
+            forma.Show();
+        }
+
+        private void noviToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrikaziFormu(new frmStudentNovi());
+        }
+
+        private void pingToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrikaziFormu(new frmPing());
         }
     }
 }

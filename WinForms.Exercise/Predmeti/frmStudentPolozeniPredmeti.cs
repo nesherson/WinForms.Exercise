@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WinForms.Exercise.Data;
+using WinForms.Exercise.Data.DTO;
 using WinForms.Exercise.Infrastructure;
+using WinForms.Exercise.Izvjestaji;
 
 namespace WinForms.Exercise.Predmeti
 {
@@ -61,6 +63,26 @@ namespace WinForms.Exercise.Predmeti
             _dbContext.SaveChanges();
 
             UcitajPolozenePredmete();
+        }
+
+        private void btnUvjerenje_Click(object sender, EventArgs e)
+        {
+            var polozeniPredmeti = _dbContext.PolozeniPredmeti
+                .Include(pp => pp.Predmet)
+                .Where(x => x.StudentId == _student.Id)
+                .ToList();
+
+            var dto = new dtoStudentUvjerenje
+            {
+                ImePrezime = $"{_student.Ime} {_student.Prezime}",
+                BrojIndeksa = _student.Indeks,
+                Svrha = "REGULISANJE STIPENDIJE",
+                Status = "REDOVAN",
+                AkademskaGodina = $"{DateTime.Now.Year - 1}/{DateTime.Now.Year}",
+                PolozeniPredmeti = polozeniPredmeti
+            };
+
+            new frmUvjerenje(dto).ShowDialog();
         }
     }
 }
