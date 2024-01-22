@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Configuration;
 using WinForms.Exercise.Data;
+using WinForms.Exercise.Data.IspitIB230123;
 
 namespace WinForms.Exercise.Infrastructure
 {
@@ -25,5 +26,11 @@ namespace WinForms.Exercise.Infrastructure
         public DbSet<Uloga> Uloge { get; set; }
         public DbSet<Predmet> Predmeti { get; set; }
         public DbSet<PolozeniPredmet> PolozeniPredmeti { get; set; }
+        public DbSet<Spol> Spolovi { get; set; }
+
+        //Ispiti
+        public DbSet<StudentIB230123> StudentiIB230123 { get; set; }
+        public DbSet<PolozeniPredmetIB230123> PolozeniPredmetiIB230123 { get; set; }
+        public DbSet<StudentUvjerenjeIB230123> StudentiUvjerenjaIB230123 { get; set; }
     }
-}
+}   

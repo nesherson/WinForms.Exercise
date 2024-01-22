@@ -9,10 +9,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="IspitIB230123\Izvjestaj\rptUvjerenje.rdlc" />
     <None Remove="Izvjestaji\rptUvjerenje.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="IspitIB230123\Izvjestaj\rptUvjerenje.rdlc" />
     <EmbeddedResource Include="Izvjestaji\rptUvjerenje.rdlc" />
   </ItemGroup>
 

@@ -19,6 +19,11 @@
                 errorProvider.SetError(cb, poruka);
                 return false;
             }
+            else if (kontrola is PictureBox pb && pb.Image == null)
+            {
+                errorProvider.SetError(pb, poruka);
+                return false;
+            }
 
             errorProvider.Clear();
 

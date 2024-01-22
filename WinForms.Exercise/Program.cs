@@ -1,4 +1,5 @@
 using WinForms.Exercise.Glavna;
+using WinForms.Exercise.IspitIB230123;
 
 namespace WinForms.Exercise
 {
@@ -13,7 +14,7 @@ namespace WinForms.Exercise
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmGlavna());
+            Application.Run(new frmPretragaIB230123());
         }
     }
 }
