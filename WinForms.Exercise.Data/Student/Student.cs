@@ -1,10 +1,9 @@
 ﻿namespace WinForms.Exercise.Data
 {
-    public class Student
+	public class Student
     {
         public Student()
         {
-            Uloga = new HashSet<Uloga>();
         }
 
         public int Id { get; set; }
@@ -17,9 +16,5 @@
         public bool Aktivan { get; set; }
         public DateTime DatumRodjenja { get; set; }
         public byte[]? Slika { get; set; }
-        public int SemestarId { get; set; }
-        public Semestar Semestar { get; set; }
-
-        public ICollection<Uloga> Uloga { get; set; }
     }
 }

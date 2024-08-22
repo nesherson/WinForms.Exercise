@@ -9,15 +9,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Ispit18.02.2021\Izvjestaj\rptCovid.rdlc" />
-    <None Remove="Ispit31.01.2023\Izvjestaj\rptUvjerenje.rdlc" />
-    <None Remove="Izvjestaji\rptUvjerenje.rdlc" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Ispit18.02.2021\Izvjestaj\rptCovid.rdlc" />
-    <EmbeddedResource Include="Ispit31.01.2023\Izvjestaj\rptUvjerenje.rdlc" />
-    <EmbeddedResource Include="Izvjestaji\rptUvjerenje.rdlc" />
+    <Compile Remove="Ispit18.02.2021\**" />
+    <EmbeddedResource Remove="Ispit18.02.2021\**" />
+    <None Remove="Ispit18.02.2021\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,16 +24,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Ispit18.02.2021\Izvjestaj\Covid.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Covid.xsd</DependentUpon>
-    </Compile>
-    <Compile Update="Izvjestaji\dsDLWMS.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>dsDLWMS.xsd</DependentUpon>
-    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -64,14 +48,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Ispit18.02.2021\Izvjestaj\Covid.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Covid.Designer.cs</LastGenOutput>
-    </None>
-    <None Update="Izvjestaji\dsDLWMS.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>dsDLWMS.Designer.cs</LastGenOutput>
-    </None>
+    <Folder Include="Izvjestaji\" />
+    <Folder Include="Predmeti\" />
+    <Folder Include="Studenti\" />
   </ItemGroup>
 
 </Project>

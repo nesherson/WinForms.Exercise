@@ -1,6 +1,6 @@
 ﻿namespace WinForms.Exercise.Glavna
 {
-    partial class frmGlavna
+	partial class frmGlavna
     {
         /// <summary>
         /// Required designer variable.
@@ -104,14 +104,12 @@
             pretragaToolStripMenuItem.Name = "pretragaToolStripMenuItem";
             pretragaToolStripMenuItem.Size = new Size(142, 22);
             pretragaToolStripMenuItem.Text = "Pretraga";
-            pretragaToolStripMenuItem.Click += pretragaToolStripMenuItem_Click;
             // 
             // noviToolStripMenuItem
             // 
             noviToolStripMenuItem.Name = "noviToolStripMenuItem";
             noviToolStripMenuItem.Size = new Size(142, 22);
             noviToolStripMenuItem.Text = "Novi student";
-            noviToolStripMenuItem.Click += noviToolStripMenuItem_Click;
             // 
             // pingToolStripMenuItem
             // 
@@ -125,14 +123,12 @@
             ispit30012023ToolStripMenuItem.Name = "ispit30012023ToolStripMenuItem";
             ispit30012023ToolStripMenuItem.Size = new Size(98, 20);
             ispit30012023ToolStripMenuItem.Text = "Ispit 30.01.2023";
-            ispit30012023ToolStripMenuItem.Click += ispit30012023ToolStripMenuItem_Click;
             // 
             // ispitToolStripMenuItem
             // 
             ispitToolStripMenuItem.Name = "ispitToolStripMenuItem";
             ispitToolStripMenuItem.Size = new Size(98, 20);
             ispitToolStripMenuItem.Text = "Ispit 31.08.2021";
-            ispitToolStripMenuItem.Click += ispitToolStripMenuItem_Click;
             // 
             // frmGlavna
             // 

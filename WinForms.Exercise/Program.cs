@@ -1,9 +1,8 @@
-using WinForms.Exercise.Glavna;
-using WinForms.Exercise.Ispit18._02._2021;
+using WinForms.Exercise.Auth;
 
 namespace WinForms.Exercise
 {
-    internal static class Program
+	internal static class Program
     {
         /// <summary>
         ///  The main entry point for the application.
@@ -14,7 +13,7 @@ namespace WinForms.Exercise
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new frmPretragaIB230125());
+            Application.Run(new frmPrijava());
         }
     }
 }
