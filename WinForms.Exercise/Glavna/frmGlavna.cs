@@ -1,4 +1,6 @@
 ﻿using WinForms.Exercise.Asinhrono;
+using WinForms.Exercise.Ispit31._08._2021;
+using WinForms.Exercise.IspitIB230123;
 using WinForms.Exercise.Studenti;
 
 namespace WinForms.Exercise.Glavna
@@ -40,6 +42,16 @@ namespace WinForms.Exercise.Glavna
         private void pingToolStripMenuItem_Click(object sender, EventArgs e)
         {
             PrikaziFormu(new frmPing());
+        }
+
+        private void ispit30012023ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrikaziFormu(new frmPretragaIB230123());
+        }
+
+        private void ispitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PrikaziFormu(new frmPretragaIB230124());
         }
     }
 }

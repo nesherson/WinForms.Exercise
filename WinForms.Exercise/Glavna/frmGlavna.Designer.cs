@@ -39,12 +39,14 @@
             pretragaToolStripMenuItem = new ToolStripMenuItem();
             noviToolStripMenuItem = new ToolStripMenuItem();
             pingToolStripMenuItem = new ToolStripMenuItem();
+            ispit30012023ToolStripMenuItem = new ToolStripMenuItem();
+            ispitToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
             // 
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fajlToolStripMenuItem, vjezbaToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fajlToolStripMenuItem, vjezbaToolStripMenuItem, ispit30012023ToolStripMenuItem, ispitToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 24);
@@ -94,7 +96,7 @@
             // 
             studentiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pretragaToolStripMenuItem, noviToolStripMenuItem });
             studentiToolStripMenuItem.Name = "studentiToolStripMenuItem";
-            studentiToolStripMenuItem.Size = new Size(180, 22);
+            studentiToolStripMenuItem.Size = new Size(118, 22);
             studentiToolStripMenuItem.Text = "Studenti";
             // 
             // pretragaToolStripMenuItem
@@ -114,9 +116,23 @@
             // pingToolStripMenuItem
             // 
             pingToolStripMenuItem.Name = "pingToolStripMenuItem";
-            pingToolStripMenuItem.Size = new Size(180, 22);
+            pingToolStripMenuItem.Size = new Size(118, 22);
             pingToolStripMenuItem.Text = "Ping";
             pingToolStripMenuItem.Click += pingToolStripMenuItem_Click;
+            // 
+            // ispit30012023ToolStripMenuItem
+            // 
+            ispit30012023ToolStripMenuItem.Name = "ispit30012023ToolStripMenuItem";
+            ispit30012023ToolStripMenuItem.Size = new Size(98, 20);
+            ispit30012023ToolStripMenuItem.Text = "Ispit 30.01.2023";
+            ispit30012023ToolStripMenuItem.Click += ispit30012023ToolStripMenuItem_Click;
+            // 
+            // ispitToolStripMenuItem
+            // 
+            ispitToolStripMenuItem.Name = "ispitToolStripMenuItem";
+            ispitToolStripMenuItem.Size = new Size(98, 20);
+            ispitToolStripMenuItem.Text = "Ispit 31.08.2021";
+            ispitToolStripMenuItem.Click += ispitToolStripMenuItem_Click;
             // 
             // frmGlavna
             // 
@@ -150,5 +166,7 @@
         private ToolStripMenuItem pretragaToolStripMenuItem;
         private ToolStripMenuItem noviToolStripMenuItem;
         private ToolStripMenuItem pingToolStripMenuItem;
+        private ToolStripMenuItem ispit30012023ToolStripMenuItem;
+        private ToolStripMenuItem ispitToolStripMenuItem;
     }
 }
