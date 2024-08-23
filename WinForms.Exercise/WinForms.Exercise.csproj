@@ -15,6 +15,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Ispit30.01.2023\rptUvjerenje.rdlc" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Ispit30.01.2023\rptUvjerenje.rdlc">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="ReportViewerCore.WinForms" Version="15.1.19" />
   </ItemGroup>
 
@@ -48,7 +58,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Izvjestaji\" />
     <Folder Include="Predmeti\" />
     <Folder Include="Studenti\" />
   </ItemGroup>
