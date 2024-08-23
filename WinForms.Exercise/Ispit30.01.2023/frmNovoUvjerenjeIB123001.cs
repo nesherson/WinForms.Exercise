@@ -8,8 +8,8 @@ namespace WinForms.Exercise.Ispit30._01._2023
 	public partial class frmNovoUvjerenjeIB123001 : Form
 	{
 		private readonly DLWMSDbContext _dbContext;
-		private Student _student;
-		public frmNovoUvjerenjeIB123001(Student student)
+		private StudentIB123001 _student;
+		public frmNovoUvjerenjeIB123001(StudentIB123001 student)
 		{
 			InitializeComponent();
 

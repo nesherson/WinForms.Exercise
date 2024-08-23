@@ -4,7 +4,7 @@
 	{
         public int Id { get; set; }
         public int StudentId { get; set; }
-        public Student Student { get; set; }
+        public StudentIB123001 Student { get; set; }
         public string VrstaUvjerenja { get; set; }
         public string SvrhaUvjerenja { get; set; }
         public byte[]? Uplatnica { get; set; }

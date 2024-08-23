@@ -8,8 +8,9 @@ namespace WinForms.Exercise.Ispit30._01._2023
 	public partial class frmUvjerenjaIB123001 : Form
 	{
 		private readonly DLWMSDbContext _dbContext;
-		private Student _student;
-		public frmUvjerenjaIB123001(Student student)
+		private StudentIB123001 _student;
+		private string _sadrzaj;
+		public frmUvjerenjaIB123001(StudentIB123001 student)
 		{
 			InitializeComponent();
 
@@ -18,6 +19,7 @@ namespace WinForms.Exercise.Ispit30._01._2023
 			_dbContext = new();
 			_student = student;
 		}
+
 
 		private async void frmUvjerenjaIB123001_Load(object sender, EventArgs e)
 		{
@@ -29,9 +31,13 @@ namespace WinForms.Exercise.Ispit30._01._2023
 			var podaci = await _dbContext.StudentiUvjerenjaIB123001
 				.Where(x => x.StudentId == _student.Id)
 				.ToListAsync();
+			var brojPodataka = podaci.Count;
+
 			dgvUvjerenja.DataSource = null;
 			dgvUvjerenja.DataSource = podaci;
-			Text = $"Broj uvjerenja -> {podaci.Count}";
+
+			Text = $"Broj uvjerenja -> {brojPodataka}";
+			btnDodaj.Enabled = brojPodataka > 0;
 		}
 
 		private async void dgvUvjerenja_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -49,7 +55,7 @@ namespace WinForms.Exercise.Ispit30._01._2023
 				}
 				else if (btnCell.Value == "Printaj")
 				{
-					await OtvoriFormuZaPrintanje(odabranoUvjerenje);	
+					await OtvoriFormuZaPrintanje(odabranoUvjerenje);
 				}
 			}
 		}
@@ -88,6 +94,52 @@ namespace WinForms.Exercise.Ispit30._01._2023
 		{
 			if (new frmNovoUvjerenjeIB123001(_student).ShowDialog() == DialogResult.OK)
 				await UcitajUvjerenja();
+		}
+
+		private void btnDodaj_Click(object sender, EventArgs e)
+		{
+			var studentUvjerenjeDto = new StudentUvjerenjeThreadIB123001DTO
+			{
+				ImePrezime = $"{_student.Ime} {_student.Prezime}",
+				Vrsta = cmbVrstaUvjerenja.Text,
+				Svrha = txtSvrhaIzdavanja.Text,
+				BrojZahtjeva = int.Parse(txtBrojZahtjeva.Text),
+				Uplatnica = (dgvUvjerenja.SelectedRows[0].DataBoundItem as StudentUvjerenjeIB123001).Uplatnica,
+				StudentId = _student.Id
+			};
+
+			var threadDodajUvjerenje = new Thread(() => DodajUvjerenje(studentUvjerenjeDto));
+
+			threadDodajUvjerenje.Start();
+		}
+
+		private void PrikaziSadrzaj()
+		{
+			txtSadrzaj.Text += _sadrzaj;
+		}
+
+		private void DodajUvjerenje(StudentUvjerenjeThreadIB123001DTO dto)
+		{
+			for (int i = 0; i < dto.BrojZahtjeva; i++)
+			{
+				var novoUvjerenje = new StudentUvjerenjeIB123001
+				{
+					VrijemeKreiranja = DateTime.Now,
+					VrstaUvjerenja = dto.Vrsta,
+					SvrhaUvjerenja = dto.Svrha,
+					Uplatnica = dto.Uplatnica,
+					StudentId = dto.StudentId
+				};
+
+				_dbContext.StudentiUvjerenjaIB123001.Add(novoUvjerenje);
+			
+				_sadrzaj = $"{novoUvjerenje.VrijemeKreiranja.TimeOfDay} -> Uvjerenje o statusu studenta ({dto.BrojIndeksa}) - {dto.ImePrezime} u svrhu {dto.Svrha}{Environment.NewLine}";
+
+				BeginInvoke(PrikaziSadrzaj);
+				Thread.Sleep(300);
+			}
+
+			_dbContext.SaveChanges();
 		}
 	}
 }

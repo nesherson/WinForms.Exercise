@@ -13,12 +13,14 @@ namespace WinForms.Exercise.Infrastructure
         }
 
         public DbSet<Korisnik> Korisnici { get; set; }
-        public DbSet<Student> Studenti { get; set; }
-        public DbSet<Spol> Spolovi { get; set; }
-        public DbSet<PolozeniPredmet> PolozeniPredmeti { get; set; }
+    
 
-		//Ispiti
+		//ISPITI
 
+        //Ispit 30.01.2023
         public DbSet<StudentUvjerenjeIB123001> StudentiUvjerenjaIB123001 { get; set; }
+		public DbSet<StudentIB123001> StudentiIB123001 { get; set; }
+		public DbSet<SpolIB123001> SpoloviIB123001 { get; set; }
+		public DbSet<PolozeniPredmetIB123001> PolozeniPredmetiIB123001 { get; set; }
 	}
 }   

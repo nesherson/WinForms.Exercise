@@ -28,14 +28,13 @@ namespace WinForms.Exercise.Ispit30._01._2023
 
 		private async Task UcitajSpolove()
 		{
-			var podaci = await _dbContext.Spolovi.ToListAsync();
+			var podaci = await _dbContext.SpoloviIB123001.ToListAsync();
 			cmbSpolovi.PostaviComboBox(podaci);
-			//cmbSpolovi.SelectedIndex = 0;
 		}
 
 		private async Task UcitajStudente()
 		{
-			var spol = cmbSpolovi.SelectedItem as Spol;
+			var spol = cmbSpolovi.SelectedItem as SpolIB123001;
 			var datumOd = dtpRodjenOd.Value;
 			var datumDo = dtpRodjenDo.Value;
 
@@ -44,8 +43,8 @@ namespace WinForms.Exercise.Ispit30._01._2023
 
 			dgvStudenti.DataSource = null;
 
-			var podaci = (await _dbContext.Studenti
-				.Include(x => x.PolozeniPredmeti)
+			var podaci = (await _dbContext.StudentiIB123001
+				.Include(x => x.PolozeniPredmetiIB123001)
 				.Where(x => x.SpolId == spol.Id && x.DatumRodjenja >= datumOd && x.DatumRodjenja <= datumDo)
 				.ToListAsync())
 				.Select(GetDto)
@@ -72,10 +71,10 @@ namespace WinForms.Exercise.Ispit30._01._2023
 		};
 
 
-		private StudentPretragaIB123001DTO GetDto(Student student)
+		private StudentPretragaIB123001DTO GetDto(StudentIB123001 student)
 		{
-			var prosjek = (float)student.PolozeniPredmeti
-				.Sum(x => x.Ocjena) / student.PolozeniPredmeti.Count;
+			var prosjek = (float)student.PolozeniPredmetiIB123001
+				.Sum(x => x.Ocjena) / student.PolozeniPredmetiIB123001.Count;
 
 			return new StudentPretragaIB123001DTO
 			{
@@ -113,7 +112,7 @@ namespace WinForms.Exercise.Ispit30._01._2023
 
 			if (dgvStudenti.CurrentCell is DataGridViewButtonCell)
 			{
-				var student = await _dbContext.Studenti
+				var student = await _dbContext.StudentiIB123001
 					.FirstOrDefaultAsync(x => x.Id == studentDto.StudentId);
 
 				new frmUvjerenjaIB123001(student).Show();
