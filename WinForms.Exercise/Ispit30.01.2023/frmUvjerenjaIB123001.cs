@@ -97,7 +97,7 @@ namespace WinForms.Exercise.Ispit30._01._2023
 				await UcitajUvjerenja();
 		}
 
-		private void btnDodaj_Click(object sender, EventArgs e)
+		private async void btnDodaj_Click(object sender, EventArgs e)
 		{
 			if (!int.TryParse(txtBrojZahtjeva.Text, out int brojZahtjeva))
 			{
@@ -115,9 +115,8 @@ namespace WinForms.Exercise.Ispit30._01._2023
 				StudentId = _student.Id
 			};
 
-			var threadDodajUvjerenje = new Thread(() => DodajUvjerenje(studentUvjerenjeDto));
-
-			threadDodajUvjerenje.Start();
+			await Task.Run(() => DodajUvjerenje(studentUvjerenjeDto));
+			await UcitajUvjerenja();
 		}
 
 		private void PrikaziSadrzaj()
