@@ -61,6 +61,15 @@ namespace WinForms.Exercise {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Molimo unesite validnu vrijednost za broj zahtjeva.
+        /// </summary>
+        internal static string BrojZahtjevaValidnaVrijednost {
+            get {
+                return ResourceManager.GetString("BrojZahtjevaValidnaVrijednost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Info.
         /// </summary>
         internal static string Info {
@@ -111,6 +120,15 @@ namespace WinForms.Exercise {
         internal static string Upozorenje {
             get {
                 return ResourceManager.GetString("Upozorenje", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Da li ste sigurni da želite obrisati uvjerenje?.
+        /// </summary>
+        internal static string UvjerenjePotvrdaBrisanja {
+            get {
+                return ResourceManager.GetString("UvjerenjePotvrdaBrisanja", resourceCulture);
             }
         }
     }

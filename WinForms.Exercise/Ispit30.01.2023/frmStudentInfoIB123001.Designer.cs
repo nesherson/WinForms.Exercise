@@ -37,6 +37,7 @@
 			// 
 			// pbSlikaStudenta
 			// 
+			pbSlikaStudenta.BorderStyle = BorderStyle.FixedSingle;
 			pbSlikaStudenta.Location = new Point(12, 12);
 			pbSlikaStudenta.Name = "pbSlikaStudenta";
 			pbSlikaStudenta.Size = new Size(282, 224);

@@ -18,7 +18,7 @@ namespace WinForms.Exercise.Ispit30._01._2023
 		}
 
 		private async void frmPretragaIB123001_Load(object sender, EventArgs e)
-		{
+		{		
 			dtpRodjenOd.Value = new DateTime(1990, 1, 1);
 			dtpRodjenDo.Value = new DateTime(2000, 1, 1);
 

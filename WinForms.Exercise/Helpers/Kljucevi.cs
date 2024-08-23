@@ -8,5 +8,7 @@
         public const string NeispravniPodaci = "NeispravniPodaci";
         public const string Upozorenje = "Upozorenje";
         public const string StudentKreiranUspjeh = "StudentKreiranUspjeh";
-    }
+        public const string UvjerenjePotvrdaBrisanja = "UvjerenjePotvrdaBrisanja";
+        public const string BrojZahtjevaValidnaVrijednost = "BrojZahtjevaValidnaVrijednost";
+	}
 }

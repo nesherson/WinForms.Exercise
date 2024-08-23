@@ -41,6 +41,7 @@
 			label2 = new Label();
 			label3 = new Label();
 			dtpRodjenDo = new DateTimePicker();
+			openFileDialog1 = new OpenFileDialog();
 			((System.ComponentModel.ISupportInitialize)dgvStudenti).BeginInit();
 			SuspendLayout();
 			// 
@@ -158,6 +159,10 @@
 			dtpRodjenDo.TabIndex = 6;
 			dtpRodjenDo.ValueChanged += dtpRodjenDo_ValueChanged;
 			// 
+			// openFileDialog1
+			// 
+			openFileDialog1.FileName = "openFileDialog1";
+			// 
 			// frmPretragaIB123001
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
@@ -194,5 +199,6 @@
 		private DataGridViewTextBoxColumn DatumRodjenja;
 		private DataGridViewCheckBoxColumn Aktivan;
 		private DataGridViewButtonColumn Uvjerenja;
+		private OpenFileDialog openFileDialog1;
 	}
 }

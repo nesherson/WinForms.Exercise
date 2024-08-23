@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using WinForms.Exercise.Data;
 using WinForms.Exercise.Data.Ispit30._01._2023;
+using WinForms.Exercise.Helpers;
 using WinForms.Exercise.Infrastructure;
 
 namespace WinForms.Exercise.Ispit30._01._2023
@@ -81,7 +82,7 @@ namespace WinForms.Exercise.Ispit30._01._2023
 
 		private async Task IzbrisiUvjerenje(StudentUvjerenjeIB123001 odabranoUvjerenje)
 		{
-			if (MessageBox.Show("Potvrda brisanja", "Da li ste sigurni da želite obrisati uvjerenje?", MessageBoxButtons.YesNo) != DialogResult.Yes)
+			if (MessageBox.Show(Resursi.Get(Kljucevi.UvjerenjePotvrdaBrisanja), Resursi.Get(Kljucevi.Upozorenje), MessageBoxButtons.YesNo) != DialogResult.Yes)
 				return;
 
 			_dbContext.StudentiUvjerenjaIB123001.Remove(odabranoUvjerenje);
@@ -98,12 +99,18 @@ namespace WinForms.Exercise.Ispit30._01._2023
 
 		private void btnDodaj_Click(object sender, EventArgs e)
 		{
+			if (!int.TryParse(txtBrojZahtjeva.Text, out int brojZahtjeva))
+			{
+				MessageBox.Show(Resursi.Get(Kljucevi.BrojZahtjevaValidnaVrijednost), Resursi.Get(Kljucevi.Info), MessageBoxButtons.OK);
+				return;
+			}
+
 			var studentUvjerenjeDto = new StudentUvjerenjeThreadIB123001DTO
 			{
 				ImePrezime = $"{_student.Ime} {_student.Prezime}",
 				Vrsta = cmbVrstaUvjerenja.Text,
 				Svrha = txtSvrhaIzdavanja.Text,
-				BrojZahtjeva = int.Parse(txtBrojZahtjeva.Text),
+				BrojZahtjeva = brojZahtjeva,
 				Uplatnica = (dgvUvjerenja.SelectedRows[0].DataBoundItem as StudentUvjerenjeIB123001).Uplatnica,
 				StudentId = _student.Id
 			};
