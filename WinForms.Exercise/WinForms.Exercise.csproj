@@ -15,10 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="Ispit01.02.2024\rptGradovi.rdlc" />
     <None Remove="Ispit30.01.2023\rptUvjerenje.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Ispit01.02.2024\rptGradovi.rdlc" />
     <EmbeddedResource Include="Ispit30.01.2023\rptUvjerenje.rdlc">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -34,6 +36,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Ispit01.02.2024\dsGradovi.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsGradovi.xsd</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -60,6 +67,13 @@
   <ItemGroup>
     <Folder Include="Predmeti\" />
     <Folder Include="Studenti\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Ispit01.02.2024\dsGradovi.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsGradovi.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
