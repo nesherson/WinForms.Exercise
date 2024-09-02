@@ -16,11 +16,13 @@
 
   <ItemGroup>
     <None Remove="Ispit01.02.2024\rptGradovi.rdlc" />
+    <None Remove="Ispit22.02.2024\rptIzvjestaj.rdlc" />
     <None Remove="Ispit30.01.2023\rptUvjerenje.rdlc" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Ispit01.02.2024\rptGradovi.rdlc" />
+    <EmbeddedResource Include="Ispit22.02.2024\rptIzvjestaj.rdlc" />
     <EmbeddedResource Include="Ispit30.01.2023\rptUvjerenje.rdlc">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </EmbeddedResource>
@@ -40,6 +42,11 @@
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>dsGradovi.xsd</DependentUpon>
+    </Compile>
+    <Compile Update="Ispit22.02.2024\dsNastava.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>dsNastava.xsd</DependentUpon>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
@@ -73,6 +80,10 @@
     <None Update="Ispit01.02.2024\dsGradovi.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>dsGradovi.Designer.cs</LastGenOutput>
+    </None>
+    <None Update="Ispit22.02.2024\dsNastava.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsNastava.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
 

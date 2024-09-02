@@ -2,6 +2,7 @@
 using System.Configuration;
 using WinForms.Exercise.Data;
 using WinForms.Exercise.Data.Ispit01._02._2024;
+using WinForms.Exercise.Data.Ispit22._02._2024;
 using WinForms.Exercise.Data.Ispit30._01._2023;
 
 namespace WinForms.Exercise.Infrastructure
@@ -32,5 +33,13 @@ namespace WinForms.Exercise.Infrastructure
         public DbSet<GradIB230002> GradoviIB230002 { get; set; }
         public DbSet<PolozeniPredmetIB230002> PolozeniPredmetiIB230002 { get; set; }
         public DbSet<PredmetIB230002> PredmetiIB230002 { get; set; }
+
+        //Ispit 22.02.2024
+
+        public DbSet<ProstorijaIB230003> ProstorijeIB230003 { get; set; }
+        public DbSet<NastavaIB230003> NastavaIB230003 { get; set; }
+        public DbSet<PrisustvoIB230003> PrisustvaIB230003 { get; set; }
+        public DbSet<PredmetIB230003> PredmetiIB230003 { get; set; }
+        public DbSet<StudentIB230003> StudentiIB230003 { get; set; }
     }
 }
